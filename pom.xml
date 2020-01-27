@@ -17,7 +17,7 @@
 	
 	<description>Maven Standalone Application</description>
 
-	<properties>
+	<!--<properties>
 		<sonar.host.url>http://35.154.242.68:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
@@ -33,7 +33,7 @@
 			<scope>test</scope>
 		</dependency>
 
-	</dependencies>
+	</dependencies> -->
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
@@ -68,6 +68,15 @@
 	        </archive>
 	      </configuration>
 	    </plugin>
+	   <plugin>
+              <groupId>org.apache.tomcat.maven</groupId>
+              <artifactId>tomcat7-maven-plugin</artifactId>
+               <version>2.0</version>
+               <configuration>
+                <url>http://3.135.204.124:8080/manager/text</url>
+                 <path>/rps</path>
+               </configuration>
+           </plugin>
 	  </plugins>
 	</build>
 	
